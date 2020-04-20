@@ -9,14 +9,4 @@
         <item>Shetland Sheep Dog</item>
         <item>Pembroke Welsh Corgi</item>
     </string-array>
-
-    <string-array name="dog_price">
-        <item>78,000</item>
-        <item>65,500</item>
-        <item>82,350</item>
-        <item>65,000</item>
-        <item>120,000</item>
-        <item>91,200</item>
-        <item>72,000</item>
-    </string-array>
 </resources>

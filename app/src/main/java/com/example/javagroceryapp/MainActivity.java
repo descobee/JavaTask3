@@ -10,8 +10,8 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     String dogName [];
-    String [] dogPrice;
-    int [] dogPhoto = {R.drawable.dog1, R.drawable.american_staffordshire_terrier, R.drawable.australian_shepherd, R.drawable.beagle,
+    int dogPrice [] = {78000, 65500, 82350, 65000, 120000, 91200, 72000};
+    int dogPhoto [] = {R.drawable.dog1, R.drawable.american_staffordshire_terrier, R.drawable.australian_shepherd, R.drawable.beagle,
             R.drawable.golden_retriever, R.drawable.shetland_sheep_dog, R.drawable.pembroke_welsh_corgi};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +19,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.recyclerName);
         dogName = getResources().getStringArray(R.array.dog_names);
-        dogPrice = getResources().getStringArray(R.array.dog_price);
 
-        myAdapter myAdapter = new myAdapter(this, dogName, dogPrice, dogPhoto);
-        recyclerView.setAdapter(myAdapter);
+        myAdapter anAdapter = new myAdapter(this, dogName, dogPrice, dogPhoto);
+        recyclerView.setAdapter(anAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }

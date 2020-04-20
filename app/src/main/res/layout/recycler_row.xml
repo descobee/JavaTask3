@@ -3,19 +3,21 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="18dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="16dp"
     android:id="@+id/Card">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="18dp"
-        android:paddingRight="18dp"
-        android:paddingLeft="18dp"
-        android:layout_marginBottom="16dp"
-        android:background="@android:color/white">
+        android:paddingBottom="10dp"
+        android:background="#D1D0D0">
 
         <ImageView
             android:id="@+id/dogImage"
@@ -25,7 +27,6 @@
             android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -35,6 +36,8 @@
             android:id="@+id/dogName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="16dp"
             android:text="TextView"
             android:textColor="#393939"
@@ -49,6 +52,8 @@
             android:id="@+id/dogPrice"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
             android:gravity="end"
             android:text="TextView"
             android:textAlignment="textEnd"
@@ -57,7 +62,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/dogName"
             app:layout_constraintTop_toTopOf="@+id/dogName" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
+

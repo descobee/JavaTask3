@@ -5,89 +5,128 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Third_Activity">
+    tools:context=".Third_Activity"
+    android:background="#94D1D0D0">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/lastImage"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
+        <androidx.cardview.widget.CardView
+            android:id="@id/cl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="18dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars"/>
+            app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D1D0D0"
+                android:paddingBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/lastImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/finalName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_horizontal"
+                    android:text="Final Name"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-smallcaps"
+                    app:layout_constraintBottom_toBottomOf="@id/lastImage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/lastImage"
+                    app:layout_constraintTop_toTopOf="@id/lastImage" />
+
+                <TextView
+                    android:id="@+id/lastPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="end"
+                    android:text="lastPrice"
+                    android:textAlignment="textEnd"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/finalName"
+                    app:layout_constraintStart_toStartOf="@id/finalName"
+                    app:layout_constraintTop_toBottomOf="@id/finalName" />
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:text="TextView"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="@+id/lastPrice"
+                    app:layout_constraintStart_toStartOf="@+id/finalName"
+                    app:layout_constraintTop_toBottomOf="@+id/lastPrice" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
             android:id="@+id/fullname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="48dp"
             android:ems="10"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lastImage" />
+            android:text="Orodu Derek"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/cl2"
+            app:layout_constraintStart_toStartOf="@+id/cl2"
+            app:layout_constraintTop_toBottomOf="@id/cl2" />
 
-        <EditText
+        <TextView
             android:id="@+id/email"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="40dp"
             android:ems="10"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="16sp"
+            android:text="descobillybilly@gmail.com"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@+id/fullname"
             app:layout_constraintStart_toStartOf="@+id/fullname"
             app:layout_constraintTop_toBottomOf="@+id/fullname" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
             android:ems="10"
-            android:textColor="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@id/email"
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/email"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@id/email"
-            android:inputType="textPassword"/>
-
-        <TextView
-            android:id="@+id/finalName"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:gravity="center_horizontal"
-            android:textSize="18sp"
-            android:textColor="@android:color/black"
-            android:layout_marginTop="18dp"
-            android:text="Final Name"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/lastImage"
-            app:layout_constraintTop_toTopOf="@id/lastImage"
-            app:layout_constraintBottom_toBottomOf="@id/lastImage"/>
-
-        <TextView
-            android:id="@+id/lastPrice"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/finalName"
-            app:layout_constraintStart_toStartOf="@id/finalName"
-            app:layout_constraintBottom_toBottomOf="@id/lastImage"
-            app:layout_constraintEnd_toEndOf="@id/finalName"
-            android:text="lastPrice"
-            android:textColor="@android:color/black"
-            android:textSize="14sp"
-            android:textAlignment="textEnd"
-            android:gravity="end" />
+            app:layout_constraintTop_toBottomOf="@id/email" />
 
         <Button
             android:id="@+id/button"
@@ -100,6 +139,5 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/password"
             android:onClick="shareIt"/>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

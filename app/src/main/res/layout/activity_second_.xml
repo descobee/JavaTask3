@@ -11,7 +11,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:paddingBottom="16dp">
 
         <ImageView
@@ -19,32 +19,40 @@
             android:layout_width="0dp"
             android:layout_height="220dp"
             android:layout_margin="16dp"
-            android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
+            tools:src="@tools:sample/avatars"
+            android:background="#83424242"/>
 
         <TextView
             android:id="@+id/SAname"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/cardview_dark_background"
+            android:paddingLeft="10dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
             android:text="TextView"
-            android:textColor="#2B2B2B"
+            android:textColor="#FFFF"
             android:textSize="20sp"
             android:textStyle="bold"
             app:fontFamily="sans-serif-smallcaps"
             app:layout_constraintEnd_toEndOf="@+id/image2"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/image2"
-            app:layout_constraintTop_toBottomOf="@+id/image2" />
+            app:layout_constraintTop_toBottomOf="@+id/image2"
+            android:paddingStart="10dp"
+            android:paddingEnd="8dp" />
 
         <TextView
             android:id="@+id/SAdata"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="The dogs you wish to buy can be seen above"
+            android:text="The dog you wish to buy can be seen above.\nAdd or reduce the number you want and click on \u0027Adopt Dog\u0027 to proceed to check-out."
             android:textColor="#2B2B2B"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@+id/dogCount"
@@ -55,29 +63,32 @@
             android:id="@+id/SAprice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="8dp"
             android:text="TextView"
             android:textColor="#2B2B2B"
-            android:textSize="16sp"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/SAname"
             app:layout_constraintTop_toBottomOf="@+id/SAname" />
+
+        <Button
+            android:id="@+id/reduceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="reduceClick"
+            android:text="remove dog"
+            app:layout_constraintStart_toStartOf="@+id/image2"
+            app:layout_constraintTop_toTopOf="@+id/addButton" />
 
         <Button
             android:id="@+id/addButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="addClick"
-            android:text="add item"
-            app:layout_constraintStart_toStartOf="@+id/image2"
-            app:layout_constraintTop_toTopOf="@+id/removeButton" />
-
-        <Button
-            android:id="@+id/removeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:onClick="removeClick"
-            android:text="remove item"
+            android:onClick="addClick"
+            android:text="add dog"
             app:layout_constraintEnd_toEndOf="@+id/image2"
             app:layout_constraintTop_toBottomOf="@+id/SAdata" />
 
@@ -86,19 +97,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:text="order"
             android:onClick="orderClick"
-            app:layout_constraintEnd_toEndOf="@+id/removeButton"
-            app:layout_constraintStart_toStartOf="@+id/addButton"
-            app:layout_constraintTop_toBottomOf="@+id/removeButton" />
+            android:text="adopt dog"
+            app:layout_constraintEnd_toEndOf="@+id/addButton"
+            app:layout_constraintStart_toStartOf="@+id/reduceButton"
+            app:layout_constraintTop_toBottomOf="@+id/addButton" />
 
         <TextView
             android:id="@+id/dogCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
             android:text="TextView"
             android:textColor="#2B2B2B"
             android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/SAname"
             app:layout_constraintTop_toTopOf="@+id/SAprice" />
 
