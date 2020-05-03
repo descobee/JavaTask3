@@ -52,7 +52,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="The dog you wish to buy can be seen above.\nAdd or reduce the number you want and click on \u0027Adopt Dog\u0027 to proceed to check-out."
+            android:text="The dog you to buy can be seen above.\nAdd or reduce the number you want and click on \u0027Adopt Dog\u0027 to proceed to check-out."
             android:textColor="#2B2B2B"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@+id/dogCount"
